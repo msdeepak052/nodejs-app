@@ -1,15 +1,31 @@
 {
   "name": "devops-webpage",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Deepak's DevOps Webpage",
+  "main": "app.js",                               // Main entry point for the application
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",                       // Start script to run your application
+    "sonar": "sonar-scanner"                      // Script to run SonarQube scan
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1"                         // Express framework
+  },
+  "devDependencies": {
+    "sonar-scanner": "^2.8.0"                    // SonarScanner CLI as dev dependency
+  },
+  "engines": {
+    "node": ">=14.0.0"                           // Specify Node.js version
+  },
+  "sonarScanner": {
+    "sonar.projectKey": "your_project_key",      // Replace with your SonarQube project key
+    "sonar.projectName": "Deepak's DevOps Webpage",
+    "sonar.projectVersion": "1.0",
+    "sonar.sources": ".",
+    "sonar.language": "js",
+    "sonar.sourceEncoding": "UTF-8"
   }
 }
