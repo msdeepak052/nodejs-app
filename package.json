@@ -1,15 +1,38 @@
 {
   "name": "devops-webpage",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Deepak's DevOps Webpage",
+  "main": "app.js",
+  "publishConfig": {
+    "registry": "http://13.201.120.40:8081/repository/Nodejs-App-Repo/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "server": "http-server -c-1 -p 9999",           
+    "start": "node app.js",                         
+    "start1": "nodemon app.js",                    
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sonar": "node sonar-project.js"                         
+  },
   "dependencies": {
-    "express": "^4.21.1"
-  }
+    "express": "^4.21.1"                           
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",                          
+    "sonar-scanner": "^3.1.0",
+    "sonarqube-scanner": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"                             
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://13.212.29.25:9980/mithuntechnologies/repository/nodejsproject/"
+  },
+  "keywords": [
+    "devops",
+    "webpage",
+    "express"
+  ],
+  "author": "Deepak",                              
+  "license": "ISC"                              
 }
