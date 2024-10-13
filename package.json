@@ -2,30 +2,36 @@
   "name": "devops-webpage",
   "version": "1.0.0",
   "description": "Deepak's DevOps Webpage",
-  "main": "app.js",                               // Main entry point for the application
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",                       // Start script to run your application
-    "sonar": "sonar-scanner"                      // Script to run SonarQube scan
+  "main": "app.js",
+  "publishConfig": {
+    "registry": "http://13.250.9.218:9980/mithuntechnologies/repository/nodejsmssrepo/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "server": "http-server -c-1 -p 9999",           // Optional: If you want to serve static files
+    "start": "node app.js",                          // Start script to run your application
+    "start1": "nodemon app.js",                      // For development, automatically restart app on changes
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sonar": "node sonar-project.js"                         // Script to run SonarQube scan
+  },
   "dependencies": {
-    "express": "^4.21.1"                         // Express framework
+    "express": "^4.21.1"                            // Express framework
   },
   "devDependencies": {
-    "sonar-scanner": "^2.8.0"                    // SonarScanner CLI as dev dependency
+    "nodemon": "^1.18.9",                           // For development, automatic restart
+    "sonar-scanner": "^2.8.0"                       // SonarScanner CLI as dev dependency
   },
   "engines": {
-    "node": ">=14.0.0"                           // Specify Node.js version
+    "node": ">=14.0.0"                              // Specify Node.js version
   },
-  "sonarScanner": {
-    "sonar.projectKey": "your_project_key",      // Replace with your SonarQube project key
-    "sonar.projectName": "Deepak's DevOps Webpage",
-    "sonar.projectVersion": "1.0",
-    "sonar.sources": ".",
-    "sonar.language": "js",
-    "sonar.sourceEncoding": "UTF-8"
-  }
+  "repository": {
+    "type": "git",
+    "url": "http://13.212.29.25:9980/mithuntechnologies/repository/nodejsproject/"
+  },
+  "keywords": [
+    "devops",
+    "webpage",
+    "express"
+  ],
+  "author": "Deepak",                               // Your name or handle
+  "license": "ISC"                                 // License type
 }
