@@ -32,6 +32,6 @@
     "webpage",
     "express"
   ],
-  "author": "Deepak",                               // Your name or handle
-  "license": "ISC"                                 // License type
+  "author": "Deepak",                              
+  "license": "ISC"                              
 }
