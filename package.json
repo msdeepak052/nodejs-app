@@ -7,21 +7,21 @@
     "registry": "http://13.250.9.218:9980/mithuntechnologies/repository/nodejsmssrepo/"
   },
   "scripts": {
-    "server": "http-server -c-1 -p 9999",           // Optional: If you want to serve static files
-    "start": "node app.js",                          // Start script to run your application
-    "start1": "nodemon app.js",                      // For development, automatically restart app on changes
+    "server": "http-server -c-1 -p 9999",           
+    "start": "node app.js",                         
+    "start1": "nodemon app.js",                    
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sonar": "node sonar-project.js"                         // Script to run SonarQube scan
+    "sonar": "node sonar-project.js"                         
   },
   "dependencies": {
-    "express": "^4.21.1"                            // Express framework
+    "express": "^4.21.1"                           
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",                           // For development, automatic restart
-    "sonar-scanner": "^2.8.0"                       // SonarScanner CLI as dev dependency
+    "nodemon": "^1.18.9",                           
+    "sonar-scanner": "^2.8.0"                       
   },
   "engines": {
-    "node": ">=14.0.0"                              // Specify Node.js version
+    "node": ">=14.0.0"                             
   },
   "repository": {
     "type": "git",
